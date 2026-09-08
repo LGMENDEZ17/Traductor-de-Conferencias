@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <h1>🌐 Traductor de Reuniones</h1>
+
+  <label>Tu idioma
+    <select id="myLang"></select>
+  </label>
+
+  <label>Idioma de la otra persona
+    <select id="otherLang"></select>
+  </label>
+
+  <label>Clave de API de Deepgram
+    <input id="deepgramKey" type="password" placeholder="dg_..." />
+  </label>
+  <p class="hint">Gratis: crea una cuenta en <a href="https://deepgram.com" target="_blank">deepgram.com</a> (da $200 de crédito, sin tarjeta).</p>
+
+  <label>Modelo de voz TTS (Deepgram Aura-2)
+    <input id="ttsModel" type="text" placeholder="aura-2-thalia-en" />
+  </label>
+  <p class="hint">Debe coincidir con el idioma de la otra persona. Ver voces disponibles en <a href="https://developers.deepgram.com/docs/tts-models" target="_blank">developers.deepgram.com/docs/tts-models</a>.</p>
+
+  <label class="checkbox"><input id="showCaptions" type="checkbox" /> Mostrar subtítulos traducidos</label>
+  <label class="checkbox"><input id="speakToMe" type="checkbox" /> Leerme en voz alta lo que dice la otra persona</label>
+
+  <div class="warning-box">
+    <label class="checkbox"><input id="bidirectional" type="checkbox" /> <b>Modo bidireccional (experimental)</b></label>
+    <p class="hint">Reemplaza tu micrófono por tu voz traducida mientras hablas, para que la otra persona te escuche en su idioma.
+    Solo funciona con la versión <b>web</b> (navegador) de Meet/Teams/Zoom, no con las apps de escritorio.
+    Pruébalo primero en una llamada de prueba antes de usarlo en una reunión importante.</p>
+  </div>
+
+  <button id="save">Guardar</button>
+  <p id="savedMsg" class="saved">Guardado ✓</p>
+
+  <script src="langs.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

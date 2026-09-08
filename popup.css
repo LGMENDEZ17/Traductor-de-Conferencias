@@ -1,0 +1,25 @@
+body {
+  width: 300px;
+  font-family: sans-serif;
+  font-size: 13px;
+  padding: 12px;
+  color: #111;
+}
+h1 { font-size: 15px; margin: 0 0 10px 0; }
+label { display: block; margin-bottom: 8px; font-weight: 600; }
+select, input[type="text"], input[type="password"] {
+  width: 100%; padding: 6px; margin-top: 3px; box-sizing: border-box;
+  border: 1px solid #ccc; border-radius: 6px; font-weight: normal;
+}
+.hint { font-size: 11px; color: #666; margin: 0 0 10px 0; font-weight: normal; }
+.checkbox { display: flex; align-items: center; gap: 6px; font-weight: normal; }
+.checkbox input { width: auto; margin: 0; }
+.warning-box {
+  border: 1px solid #f59e0b; background: #fffbeb; border-radius: 8px;
+  padding: 8px; margin: 10px 0;
+}
+button {
+  width: 100%; padding: 8px; background: #3b82f6; color: #fff; border: none;
+  border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 6px;
+}
+.saved { color: #16a34a; text-align: center; font-weight: bold; display: none; }
